@@ -1,16 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Project</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tomas Hakl · Personal Site</title>
+  <meta name="description" content="Personal site of Tomas Hakl – Advanced Analytics professional & endurance‑sports enthusiast."/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Web Project</h1>
-        <p>This is a starter template for your web project.</p>
+
+  <!-- Sticky nav -->
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#work">Work</a>
+    <a href="#sports">Sports</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero banner -->
+  <header id="hero" class="hero">
+    <!-- Replace hero.jpg with your own image in /assets/ -->
+    <img src="assets/hero.jpg" alt="Hero banner: Tomas Hakl"/>
+    <div class="overlay">
+      <h1>Tomas Hakl</h1>
+      <p class="tagline">Advanced analytics lead · Endurance‑sports devotee</p>
     </div>
-    <script src="main.js"></script>
+  </header>
+
+  <!-- Work Experience -->
+  <section id="work" class="container">
+    <h2>Work Experience</h2>
+    <ul>
+      <li><strong>Principal Advanced Analytics Analyst, Medtronic</strong> (Aug 2022 – Present) — Transforming the global corporate‑audit function with a data‑centric BI strategy; lead high‑impact analytics projects supporting four regional audit teams.</li>
+      <li><strong>Principal Financial Analyst, Medtronic</strong> (Mar 2022 – Aug 2022) — Oversaw FP&A and analytics initiatives for EMEA, ensuring seamless hand‑off to the newly formed Advanced Analytics group.</li>
+      <li><strong>Senior Financial Analyst, Medtronic</strong> (Jan 2021 – Mar 2022) — Owned FP&A for the Southern Africa business; built an end‑to‑end Power BI model delivering deep performance and market‑share insights to stakeholders.</li>
+      <li><strong>Financial Analyst, Medtronic</strong> (Mar 2019 – Jan 2021) — Managed P&amp;L forecasting and annual planning for the CEMA Neuroscience portfolio; created multidimensional BI reporting across revenue, expense, inventory, and assets.</li>
+      <li><strong>Internal Auditor, Medtronic</strong> (May 2015 – Feb 2019) — Executed EMEA audit projects, SOx testing, and control‑effectiveness reviews; delivered findings to senior leadership and acquisition teams.</li>
+    </ul>
+    <p><a href="https://www.linkedin.com/in/tomashakl" target="_blank" rel="noopener">View full résumé on LinkedIn →</a></p>
+  </section>
+
+  <!-- Garmin live widget -->
+  <section id="sports" class="container">
+    <h2>My Sports Stats</h2>
+    <div class="embed-responsive">
+      <!-- 🔽  Replace the line below with your real Garmin <iframe> embed code  🔽 -->
+      <!-- <iframe src="YOUR-GARMIN-EMBED-URL" frameborder="0" loading="lazy"></iframe> -->
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="container">
+    <h2>Portfolio / Projects</h2>
+    <div class="cards">
+      <!-- Duplicate <article> for each project -->
+      <article class="card">
+        <img src="assets/project-1.jpg" alt="Screenshot of Project 1"/>
+        <h3>Project Name 1</h3>
+        <p>One‑sentence description of what it does.</p>
+        <p><a href="https://link-to-project.com" target="_blank" rel="noopener">Learn more →</a></p>
+      </article>
+
+      <article class="card">
+        <img src="assets/project-2.jpg" alt="Screenshot of Project 2"/>
+        <h3>Project Name 2</h3>
+        <p>One‑sentence description of what it does.</p>
+        <p><a href="https://link-to-project.com" target="_blank" rel="noopener">Learn more →</a></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2>Get in touch</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+
+    <div class="icons">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/tomashakl" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <!-- Strava -->
+      <a href="https://www.strava.com/athletes/YOURID" aria-label="Strava" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 19 21 12 17 5 21 12 2"/></svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/YOURID" aria-label="GitHub" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.9 9.4.5.1.7-.2.7-.5v-2c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.8-1.4-2.2-.3-4.4-1.1-4.4-4.8 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1 .8-.2 1.7-.3 2.5-.3.9 0 1.7.1 2.5.3 2-.1 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.7-2.3 4.4-4.4 4.6.4.3.8 1 .8 2v3c0 .3.2.6.7.5 4-1.3 6.9-5 6.9-9.4C22 6.5 17.5 2 12 2z"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Tomas Hakl. All rights reserved.
+  </footer>
+
+  <!-- Tiny JS: current year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-</html> 
+</html>

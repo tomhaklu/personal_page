@@ -3,17 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tomas Hakl · Personal Site</title>
-  <meta name="description" content="Personal site of Tomas Hakl – Advanced Analytics professional & endurance‑sports enthusiast."/>
+  <title>Tomas Hakl · Personal Site</title>
+  <meta name="description" content="Personal site of Tomas Hakl – Advanced Analytics professional & endurance-sports enthusiast."/>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ===== Base ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #222; background:#fff; }
+    h1, h2, h3 { font-weight: 700; margin-bottom: .4em; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+    p, li { font-weight: 300; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ===== Layout helpers ===== */
+    nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; padding: .5rem 1rem; display: flex; gap: 1rem; z-index: 100; }
+    nav a { font-weight: 500; font-size: .9rem; }
+
+    .hero { position: relative; text-align: center; }
+    .hero img { width: 100%; height: 45vh; object-fit: cover; }
+    .hero .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(0,0,0,.4); color:#fff; padding: 0 1rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: .3em; }
+    .tagline { font-size: 1.1rem; font-weight: 300; }
+
+    .container { max-width: 860px; margin: 3rem auto; padding: 0 1rem; }
+    ul { margin-left: 1.2rem; }
+    li + li { margin-top: .6rem; }
+
+    /* Garmin responsive iframe */
+    .embed-responsive { position: relative; padding-top: 56.25%; }
+    .embed-responsive iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
+
+    /* Portfolio cards */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .card { border: 1px solid #eee; border-radius: 6px; overflow: hidden; background:#fafafa; display: flex; flex-direction: column; }
+    .card img { width: 100%; height: 140px; object-fit: cover; }
+    .card h3 { margin: .8rem 1rem .4rem; }
+    .card p { margin: 0 1rem 1rem; flex-grow: 1; }
+
+    /* Contact icons */
+    .icons { display: flex; gap: 1rem; margin-top: .5rem; }
+    .icons svg { width: 24px; height: 24px; stroke-width: 1.8px; }
+
+    footer { text-align: center; font-size: .9rem; margin: 4rem 0 2rem; color:#666; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .hero img { height: 35vh; }
+    }
+  </style>
 </head>
 <body>
-
   <!-- Sticky nav -->
   <nav>
     <a href="#hero">Home</a>
@@ -28,8 +72,8 @@
     <!-- Replace hero.jpg with your own image in /assets/ -->
     <img src="assets/hero.jpg" alt="Hero banner: Tomas Hakl"/>
     <div class="overlay">
-      <h1>Tomas Hakl</h1>
-      <p class="tagline">Advanced analytics lead · Endurance‑sports devotee</p>
+      <h1>Tomas Hakl</h1>
+      <p class="tagline">Advanced analytics lead · Endurance-sports devotee</p>
     </div>
   </header>
 
@@ -37,13 +81,13 @@
   <section id="work" class="container">
     <h2>Work Experience</h2>
     <ul>
-      <li><strong>Principal Advanced Analytics Analyst, Medtronic</strong> (Aug 2022 – Present) — Transforming the global corporate‑audit function with a data‑centric BI strategy; lead high‑impact analytics projects supporting four regional audit teams.</li>
-      <li><strong>Principal Financial Analyst, Medtronic</strong> (Mar 2022 – Aug 2022) — Oversaw FP&A and analytics initiatives for EMEA, ensuring seamless hand‑off to the newly formed Advanced Analytics group.</li>
-      <li><strong>Senior Financial Analyst, Medtronic</strong> (Jan 2021 – Mar 2022) — Owned FP&A for the Southern Africa business; built an end‑to‑end Power BI model delivering deep performance and market‑share insights to stakeholders.</li>
-      <li><strong>Financial Analyst, Medtronic</strong> (Mar 2019 – Jan 2021) — Managed P&amp;L forecasting and annual planning for the CEMA Neuroscience portfolio; created multidimensional BI reporting across revenue, expense, inventory, and assets.</li>
-      <li><strong>Internal Auditor, Medtronic</strong> (May 2015 – Feb 2019) — Executed EMEA audit projects, SOx testing, and control‑effectiveness reviews; delivered findings to senior leadership and acquisition teams.</li>
+      <li><strong>Principal Advanced Analytics Analyst, Medtronic</strong> (Aug 2022 – Present) — Transforming the global corporate-audit function with a data-centric BI strategy; lead high-impact analytics projects supporting four regional audit teams.</li>
+      <li><strong>Principal Financial Analyst, Medtronic</strong> (Mar 2022 – Aug 2022) — Oversaw FP&A and analytics initiatives for EMEA, ensuring seamless hand-off to the newly formed Advanced Analytics group.</li>
+      <li><strong>Senior Financial Analyst, Medtronic</strong> (Jan 2021 – Mar 2022) — Owned FP&A for the Southern Africa business; built an end-to-end Power BI model delivering deep performance and market-share insights to stakeholders.</li>
+      <li><strong>Financial Analyst, Medtronic</strong> (Mar 2019 – Jan 2021) — Managed P&amp;L forecasting and annual planning for the CEMA Neuroscience portfolio; created multidimensional BI reporting across revenue, expense, inventory, and assets.</li>
+      <li><strong>Internal Auditor, Medtronic</strong> (May 2015 – Feb 2019) — Executed EMEA audit projects, SOx testing, and control-effectiveness reviews; delivered findings to senior leadership and acquisition teams.</li>
     </ul>
-    <p><a href="https://www.linkedin.com/in/tomashakl" target="_blank" rel="noopener">View full résumé on LinkedIn →</a></p>
+    <p><a href="https://www.linkedin.com/in/tomashakl" target="_blank" rel="noopener">View full résumé on LinkedIn →</a></p>
   </section>
 
   <!-- Garmin live widget -->
@@ -51,7 +95,6 @@
     <h2>My Sports Stats</h2>
     <div class="embed-responsive">
       <iframe src="https://connect.garmin.com/modern/activity/16714718738/embed" width="600" height="350" frameborder="0" scrolling="no" loading="lazy"></iframe>
-      <!-- <iframe src="YOUR-GARMIN-EMBED-URL" frameborder="0" loading="lazy"></iframe> -->
     </div>
   </section>
 
@@ -61,17 +104,17 @@
     <div class="cards">
       <!-- Duplicate <article> for each project -->
       <article class="card">
-        <img src="assets/project-1.jpg" alt="Screenshot of Project 1"/>
-        <h3>Project Name 1</h3>
-        <p>One‑sentence description of what it does.</p>
-        <p><a href="https://link-to-project.com" target="_blank" rel="noopener">Learn more →</a></p>
+        <img src="assets/project-1.jpg" alt="Screenshot of Project 1"/>
+        <h3>Project Name 1</h3>
+        <p>One-sentence description of what it does.</p>
+        <p><a href="https://link-to-project.com" target="_blank" rel="noopener">Learn more →</a></p>
       </article>
 
       <article class="card">
-        <img src="assets/project-2.jpg" alt="Screenshot of Project 2"/>
-        <h3>Project Name 2</h3>
-        <p>One‑sentence description of what it does.</p>
-        <p><a href="https://link-to-project.com" target="_blank" rel="noopener">Learn more →</a></p>
+        <img src="assets/project-2.jpg" alt="Screenshot of Project 2"/>
+        <h3>Project Name 2</h3>
+        <p>One-sentence description of what it does.</p>
+        <p><a href="https://link-to-project.com" target="_blank" rel="noopener">Learn more →</a></p>
       </article>
     </div>
   </section>
@@ -84,26 +127,7 @@
     <div class="icons">
       <!-- LinkedIn -->
       <a href="https://www.linkedin.com/in/tomashakl" aria-label="LinkedIn" target="_blank" rel="noopener">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
       <!-- Strava -->
-      <a href="https://www.strava.com/athletes/YOURID" aria-label="Strava" target="_blank" rel="noopener">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 19 21 12 17 5 21 12 2"/></svg>
-      </a>
-      <!-- GitHub -->
-      <a href="https://github.com/YOURID" aria-label="GitHub" target="_blank" rel="noopener">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.9 9.4.5.1.7-.2.7-.5v-2c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.8-1.4-2.2-.3-4.4-1.1-4.4-4.8 0-1.1.4-2 1-2.7 0-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1 .8-.2 1.7-.3 2.5-.3.9 0 1.7.1 2.5.3 2-.1 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.7-2.3 4.4-4.4 4.6.4.3.8 1 .8 2v3c0 .3.2.6.7.5 4-1.3 6.9-5 6.9-9.4C22 6.5 17.5 2 12 2z"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    © <span id="year"></span> Tomas Hakl. All rights reserved.
-  </footer>
-
-  <!-- Tiny JS: current year -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+      <a href="https://www.strava.com/athletes/YOURID" aria-label="Strava" target="_blank
